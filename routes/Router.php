@@ -4,6 +4,10 @@ namespace Router;
 
 use Router\Route;
 
+/**
+ * Launch the router
+ * Different method GET - POST - DELETE - PUT
+ */
 class Router {
 
     public $url;

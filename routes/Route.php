@@ -1,6 +1,10 @@
 <?php
 namespace Router;
 
+/**
+ * Create Routes with a path - an action and match it 
+ * with the right method ~ like Laravel
+ */
 class Route  
 {
 
