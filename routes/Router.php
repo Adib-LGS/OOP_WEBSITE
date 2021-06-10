@@ -26,9 +26,11 @@ class Router {
     public function run()
     {
         foreach ($this->routes[$_SERVER['REQUEST_METHOD']] as $route) {
-            $route->match($this->url) ? $route->execute() : null;
+            if ($route->match($this->url)) {
+                return $route->execute();
+            }
         }
 
-        //return header('HTTP/1.0 404 Not Found');
+        return header('HTTP/1.0 404 Not Found');
     }
 }

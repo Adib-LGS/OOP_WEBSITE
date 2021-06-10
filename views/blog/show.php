@@ -1,1 +1,1 @@
-<h1>Post n-...</h1>
+<h1>Post n-<?= $aparams['id'] ?></h1>
