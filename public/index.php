@@ -1,11 +1,11 @@
 <?php
+
+use Router\Router;
+
+
 require '../vendor/autoload.php';
 
-use Framework\App;
+$router = new Router($_GET['url']);
 
-use function Http\Response\send;
-
-$app = new App;
-
-$response = $app->run(\GuzzleHttp\Psr7\ServerRequest::fromGlobals());
-send($response);
+$router->get('/', 'App\Controllers\BlogController@index');
+$router->run();
